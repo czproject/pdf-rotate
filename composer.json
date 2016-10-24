@@ -1,0 +1,20 @@
+{
+	"name": "czproject/pdf-rotate",
+	"type": "library",
+	"description": "Rotation of PDF pages.",
+	"license": "BSD-3-Clause",
+	"authors": [
+		{
+			"name": "Jan Pecha",
+			"homepage": "https://www.janpecha.cz/"
+		}
+	],
+	"require": {
+		"php": ">=5.3.0",
+		"setasign/fpdi": "^1.6",
+		"setasign/fpdi-fpdf": "^1.6"
+	},
+	"autoload": {
+		"classmap": ["src/"]
+	}
+}
