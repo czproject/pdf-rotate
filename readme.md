@@ -1,6 +1,18 @@
 
 # PdfRotate
 
+
+## Installation
+
+[Download a latest package](https://github.com/czproject/pdf-rotate/releases) or use [Composer](http://getcomposer.org/):
+
+```
+composer require czproject/pdf-rotate
+```
+
+`CzProject\PdfRotate` requires PHP 5.3.0 or later.
+
+
 ## Usage
 
 
@@ -15,19 +27,6 @@ $outputFile = '/path/to/output.pdf';
 
 $pdf->rotatePdf($sourceFile, $outputFile, $pdf::DEGREES_90);
 ```
-
-
-Installation
-------------
-
-[Download a latest package](https://github.com/czproject/pdf-rotate/releases) or use [Composer](http://getcomposer.org/):
-
-```
-composer require [--dev] czproject/pdf-rotate
-```
-
-`CzProject\PdfRotate` requires PHP 5.3.0 or later.
-
 
 ------------------------------
 
