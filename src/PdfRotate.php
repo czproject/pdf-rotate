@@ -2,7 +2,7 @@
 
 	namespace CzProject\PdfRotate;
 
-	use FPDI;
+	use setasign\Fpdi;
 
 
 	class PdfRotate
@@ -21,7 +21,7 @@
 		 */
 		public function rotatePdf($sourceFile, $outputFile, $degrees)
 		{
-			$pdf = new FPDI;
+			$pdf = new Fpdi\Fpdi;
 			$pageCount = $pdf->setSourceFile($sourceFile); //the original file
 
 			for ($i = 1; $i <= $pageCount; $i++) {
@@ -31,7 +31,7 @@
 				$size = $pdf->getTemplateSize($tpage);
 
 				// get original page orientation
-				$orientation = $size['w'] > $size['h'] ? 'L' : 'P';
+				$orientation = $size['width'] > $size['height'] ? 'L' : 'P';
 
 				$pdf->AddPage($orientation, '', $degrees);
 				$pdf->useTemplate($tpage);
