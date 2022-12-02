@@ -29,9 +29,11 @@
 				$size = $pdf->getTemplateSize($tpage);
 
 				// get original page orientation
-				$orientation = $size['width'] > $size['height'] ? 'L' : 'P';
+				$orientation = isset($size['orientation'])
+					? $size['orientation']
+					: ($size['width'] > $size['height'] ? 'L' : 'P');
 
-				$pdf->AddPage($orientation, '', $degrees);
+				$pdf->AddPage($orientation, [$size['width'], $size['height']], $degrees);
 				$pdf->useTemplate($tpage);
 			}
 
