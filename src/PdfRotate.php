@@ -25,8 +25,6 @@
 			$pageCount = $pdf->setSourceFile($sourceFile); //the original file
 
 			for ($i = 1; $i <= $pageCount; $i++) {
-				$pageformat = array('Rotate' => $degrees);
-
 				$tpage = $pdf->importPage($i);
 				$size = $pdf->getTemplateSize($tpage);
 
