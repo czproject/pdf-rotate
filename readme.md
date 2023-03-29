@@ -1,5 +1,9 @@
-
 # PdfRotate
+
+[![Build Status](https://github.com/czproject/pdf-rotate/workflows/Build/badge.svg)](https://github.com/czproject/pdf-rotate/actions)
+[![Downloads this Month](https://img.shields.io/packagist/dm/czproject/pdf-rotate.svg)](https://packagist.org/packages/czproject/pdf-rotate)
+[![Latest Stable Version](https://poser.pugx.org/czproject/pdf-rotate/v/stable)](https://github.com/czproject/pdf-rotate/releases)
+[![License](https://img.shields.io/badge/license-New%20BSD-blue.svg)](https://github.com/czproject/pdf-rotate/blob/master/license.md)
 
 Rotate PDF documents from PHP.
 
