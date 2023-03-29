@@ -1,0 +1,17 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - v*
+
+  pull_request:
+
+jobs:
+    coding-style:
+        uses: janpecha/actions/.github/workflows/code-checker.yml@master
+
+    static-analysis:
+        uses: janpecha/actions/.github/workflows/phpstan.yml@master
