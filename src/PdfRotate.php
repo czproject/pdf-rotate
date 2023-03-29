@@ -14,9 +14,9 @@
 
 
 		/**
-		 * @param  string
-		 * @param  string
-		 * @param  int
+		 * @param  string $sourceFile
+		 * @param  string $outputFile
+		 * @param  int $degrees
 		 * @return void
 		 */
 		public function rotatePdf($sourceFile, $outputFile, $degrees)
@@ -27,13 +27,24 @@
 			for ($i = 1; $i <= $pageCount; $i++) {
 				$tpage = $pdf->importPage($i);
 				$size = $pdf->getTemplateSize($tpage);
+				$orientation = ''; // use default orientation
+				$newSize = ''; // use default size
 
 				// get original page orientation
-				$orientation = isset($size['orientation'])
-					? $size['orientation']
-					: ($size['width'] > $size['height'] ? 'L' : 'P');
+				if (isset($size['orientation'])) {
+					$orientation = $size['orientation'];
 
-				$pdf->AddPage($orientation, [$size['width'], $size['height']], $degrees);
+				}
+
+				if (isset($size['width'], $size['height'])) {
+					if ($orientation === '') {
+						$orientation = ($size['width'] > $size['height'] ? 'L' : 'P');
+					}
+
+					$newSize = [$size['width'], $size['height']];
+				}
+
+				$pdf->AddPage($orientation, $newSize, $degrees);
 				$pdf->useTemplate($tpage);
 			}
 
