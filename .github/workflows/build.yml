@@ -1,13 +1,13 @@
 name: Build
 
 on:
-  push:
-    branches:
-      - master
-    tags:
-      - v*
+    push:
+        branches:
+            - master
+        tags:
+            - 'v*'
 
-  pull_request:
+    pull_request:
 
 jobs:
     coding-style:
