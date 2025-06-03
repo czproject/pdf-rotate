@@ -18,7 +18,7 @@ Rotate PDF documents from PHP.
 composer require czproject/pdf-rotate
 ```
 
-`CzProject\PdfRotate` requires PHP 5.3 or later.
+`CzProject\PdfRotate` requires PHP 8.0 or later.
 
 
 ## Usage
