@@ -14,7 +14,8 @@
 	],
 	"require": {
 		"php": "8.0 - 8.4",
-		"setasign/fpdi-fpdf": "^2.0"
+		"setasign/fpdi": "^2.6",
+		"setasign/fpdf": "^1.8"
 	},
 	"autoload": {
 		"classmap": ["src/"]
